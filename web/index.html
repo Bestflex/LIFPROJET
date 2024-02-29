@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- Defines types of documents : Html 5.O -->
+<html>
+  <head>
+    <!-- Information about website and creator -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Defines the compatibility of version with browser -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- for make website responsive -->
+    <link rel="stylesheet" href="/web/src/css/style.css">
+    
+    <meta name="author" content="BENAZIZ OUSSAMA p2007990" >
+    <meta name="Linkedin profile" content="WWW.linkedin.com/Mr.X_123" >
+    <!-- To give information about author or owner -->
+    <meta name="description " content="Representation des feux de forets en France">
+    <!-- to explain about website in few words -->
+    <title>FOREST FIRE</title>
+    <!-- Name of website or content to display -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+
+  	<!--<script src ="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>-->
+  	<script src ="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <!--<script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    
+
+  </head>
+  <header>
+    <!-- Main content of website -->
+    <!-- <div class="logo" id="logo">
+      <img src="data/forest.png" style="margin-left: 10px; height: 150px; width: 150px;"</img>  
+    </div> -->
+    <div class="menu">
+      <h1 class="logo">FOREST<span>FIRE</span></h1>
+      <ul>
+        <li><a href="/web/index.html">Home</a></li>
+        <li><a href="/web/src/route/cellules_vonoroi.html">Cellules Vonoroi</a></li>
+        <li><a href="/web/src/route/prevention.html">Prevention</a></li>
+        <li><a href="/web/src/route/about.html">About</a></li>
+        
+      </ul>
+    </div> <br>
+  </header>
+  <body>
+    <div class="grp">
+      <div class="info">
+        <h2>Selection</h2><br>
+        <h3>Research : </h3><br>
+        <div class="container" id="cont" >
+          <input type="text" maxlength="12" placeholder="Rechercher" class="searchbar" id="txtrecherche"/>
+          <img src="https://images-na.ssl-images-amazon.com/images/I/41gYkruZM2L.png" alt="search icon" class="button" id="btsch" onclick= "rechercher()"/>
+        </div>
+        <br>
+        <h3>By date : </h3><br>
+        <div class="triedate" id="tdate">
+          <label>Entre </label><input type="date" id="start" name="trip-start"
+           value="2009-05-11" min="2006-12-28" max="2021-12-27"><label> et </label>
+           <input type="date" id="end" name="trip-end"
+           value="2018-07-22" min="2006-12-28" max="2021-12-27">
+           <button onclick= "tdate()"> <span>Valider</span> </button>
+        </div>
+        <br>
+        <div class="trieheure" id="theure">
+          <h3>By departement : </h3><br>
+          <select name="departement" id="dpt" >
+            <option value="">--choose a departement--</option>
+            <script> for(var i=1; i<100; i++) 
+            {
+              document.open();
+              document.write("<option value=",i,">",i,"</option>");
+              document.close();
+            }
+            </script>
+          </select>
+          <button onclick = "tdpt()"> <span>Valider</span> </button>
+        </div>
+      </div>
+      <div class="carte" id="map">
+        <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <script src="/web/src/js/main.js"></script>
+      </div>
+    </div>
+  </body>
+  <footer>
+
+  </footer>
+</html>

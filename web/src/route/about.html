@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- Defines types of documents : Html 5.O -->
+<html>
+  <head>
+    <!-- Information about website and creator -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Defines the compatibility of version with browser -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- for make website responsive -->
+    <link rel="stylesheet" href="/web/src/css/style.css">
+    
+    <meta name="author" content="BENAZIZ OUSSAMA p2007990" >
+    <meta name="Linkedin profile" content="WWW.linkedin.com/Mr.X_123" >
+    <!-- To give information about author or owner -->
+    <meta name="description " content="Representation des feux de forets en France">
+    <!-- to explain about website in few words -->
+    <title>FOREST FIRE</title>
+    <!-- Name of website or content to display -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
+  </head>
+  <header>
+    <!-- Main content of website -->
+    <!-- <div class="logo" id="logo">
+      <img src="data/forest.png" style="margin-left: 10px; height: 150px; width: 150px;"</img>  
+    </div> -->
+    <div class="menu">
+      <h1 class="logo">FOREST<span>FIRE</span></h1>
+      <ul>
+        <li><a href="/web/index.html">Home</a></li>
+        <li><a href="/web/src/route/cellules_vonoroi.html">Cellules Vonoroi</a></li>
+        <li><a href="/web/src/route/prevention.html">Prevention</a></li>
+        <li><a href="/web/src/route/about.html">About</a></li>
+        
+      </ul>
+    </div> <br>
+  </header>
+  <body>
+    <div class="us">
+      <h2>About Us</h2></br>
+      <h3>Les développeurs :</h3>
+      <div>
+        Le site web est développé par trois étudiants de Licence 3 Informatique à l'Université Lyon 1, Oussama BENAZIZ, Jules BONHOTAL et Anis GHEBRIOUA.</br>
+      </div>
+      </br><h3>Le contexte :</h3>
+      <div>
+        Ce site a été créée dans le cadre de l'UE LIFPROJET, pour l'universiter lyon 1. Durant le premiere semstre de l'année scolaire 2022/2023
+      </div>
+      </br><h3>Le sujet :</h3>
+      <div>
+        RC1. Data Explorable.<br>
+        Nous avons decider de fair un site pour représenter les feux de forêts car c'est un sujet de plus en plus important à cause dû 
+        Réchauffement climatique. De plus ce sujet nous permettait de travailler sur des disciplines qui nous intéressent comme le
+        traitement de données ou le développement web.
+
+      </div>
+      </br><h3>L'objectif :</h3>
+      <div>
+        Notre objectif était de créer un site qui permettrait de représenter graphiquement, et clairement les feux de forêts sur une carte et d'ainsi par la suite pouvoir déterminer les régions dangereuses en France.
+        Mais aussi de développer nos compétences et notre capacité a travaillé en autonomie.
+      </div>
+      </br><h3>Les ressources utilisées :</h3></br>
+      <div>
+        <div class="image">
+          <h4>Notebook jupyter</h4><img class="jupyter" src="/web/image/jupyter.png">
+        </div>
+        <br><h4>Librairies Python : </h4>
+        <br><div class="image">
+          <h4>- Pandas et Geopandas</h4><img class="geopandas" src="/web/image/geopandas.png">
+        </div>
+        <br><div class="image">
+          <h4>- Numpy</h4><img class="numpy" src="/web/image/numpy.png">
+        </div>
+        <br><div class="image">
+          <h4>- Geojson et Json</h4><img class="json" src="/web/image/geojson.png">
+        </div>
+        <br><div class="image">
+          <h4>- Scipy Spatial</h4><img class="scipy" src="/web/image/scipy.png">
+        </div>
+        <br><div class="image">
+          <h4>- Matplotlib</h4><img class="matplotlib" src="/web/image/matplotlib.png">
+        </div>
+        <br><h4>- Shapely</h4>
+        <br><div class="image">
+          <h4>Live Server</h4><img class="liveserver" src="/web/image/liveserver.png">
+        </div>
+        <br><div class="image">
+          <h4>jQuery</h4><img class="jquery" src="/web/image/jquery.png">
+        </div>
+        <br><div class="image">
+          <h4>Leaflet</h4><img class="leaflet" src="/web/image/leaflet.png">
+        </div>
+      </div>
+      </br><h3>La map interactive LEAFLET :</h3>
+      <div>
+        Leaflet est une bibliothèque JavaScript libre de cartographie en ligne développée par l'ukrainien Vladimir Agafonkin de CloudMade et de nombreux contributeurs. Elle est notamment utilisée par le projet de cartographie libre et ouverte OpenStreetMap.
+        On se sert de la bibliotheque pour afficher dans un premier temps des markers avec la position des feux enregistrés, puis dans un second temps on affiche des cluster qui representent les departements francais. On se sert de ses cluster pour determiner les departements dangereux. 
+      </div>
+      </br><h3>Fonctionnement du site web et possibilités :</h3>
+      <div>
+        Dans la page Home il est possible de faire plusieurs types de recherche: par date, par nom ou par département.
+        La recherche par nom à un menu déroulant de suggestions de noms en fonction de ce qui a déjà été entrer. En fonction
+        de la rechercher effectuer la carte sur la droite est mise à jour pour afficher les points correspondant a la rechercheIl
+        est aussi possible de clicker sur un point afficher pour qu'une bulle d'information sur ce point de données apparaisse,
+        il contient le numéro INSEE du point, la date et l'heure d'enregistrement du feu ainsi que la surface brulée par le feu. <br><br>
+        Dans la page Prévention, il y a une carte de la France découper par départements. Ces départements ont une couleur qui
+        depend du nombre de feux ayant été enregistré dans ce département, plus le nombre est grand plus le département est sombre.
+        Cette gradation de couleurs est indiqué par une légende en bas de page. En survolant un département, une carte d'info après et
+        indique le nom du départementla surface moyen brûlée par les feux enregister dans ce département et le nombre de feux enregistrer
+        entre 2006 et 2022 dans ce département.<br><br>
+        La page voronoi fonctionne de manière très similaire à la page Prévention mais au lieu d'afficher les départements elle affiche
+        une tesselation de vonoroi. La taille des cellules est représentative du nombre de feu, et la couleur de la surface brûlée dans
+        Chaque cellule.<br><br>
+        La page About rassemble des informations sur le site(même si ça serait difficile d'arriver ici sans le savoir).
+      </div>
+    </div>
+  </body>
+  <footer>
+  </footer>
+</html>
